@@ -1,0 +1,9 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:1340px;
+    height: 28px;
+    margin-top: 39px;
+    margin-bottom: 20px;
+  }

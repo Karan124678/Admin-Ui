@@ -1,0 +1,90 @@
+/* .table {
+  width: 100%;
+  margin-top: 20px;
+
+  
+  
+  
+}
+
+
+.table-head
+{
+width:100%;
+}
+.table th,
+.table td {
+  padding: 8px;
+  text-align: center;
+  vertical-align: middle;
+  border-bottom:1px solid grey;
+}
+ */
+ .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .table th, .table td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  .table th:nth-child(1),
+  .table td:nth-child(1) {
+    width: 10%; 
+  }
+  
+  .table th:nth-child(2),
+  .table td:nth-child(2) {
+    width: 20%; 
+  }
+  
+  .table th:nth-child(3),
+  .table td:nth-child(3),
+  .table th:nth-child(4),
+  .table td:nth-child(4) {
+    width: 25%; 
+  }
+  
+  .table th:nth-child(5),
+  .table td:nth-child(5) {
+    width: 20%; 
+  }
+  .icon {
+    gap: 5px;
+    
+  }
+  
+  .delete-icon {
+  
+    color: #f44336; /* Red color */ 
+  
+  }
+  
+  .edit-icon {
+    color:solid gray;
+     cursor: pointer;/* Red color */ 
+  }
+  .delete-icon,
+  .edit-icon {
+    font-size: 24px; 
+    margin-right: 10px;
+  }
+  .delete-icon,
+  .edit-icon {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-right: 40px; /* Add spacing between icons */
+    cursor: pointer;
+    display: inline-block; /* Display the icons inline */
+    vertical-align: middle; /* Align icons vertically within the cell */
+    padding:10px;
+    border:0.3px solid;
+  }
+  
