@@ -2,7 +2,6 @@ import './App.css'
 import { TableUi } from "./tableui";
 import { SearchBar } from "./searchbar";
 import React, { useState, useEffect } from 'react';
-// import { ButtonUi } from './buttonui';
 import "./buttonui.css";
 
 export default function App() {
@@ -13,7 +12,8 @@ export default function App() {
   const [isChecked, setIsChecked] = useState(false);
   const [editableUser, setEditableUser] = useState(null);
 
-  // const [row,setRow] = useState([...currentData,selectAll])
+
+  // :-Fething users Details Using Api
 
   const FetchUsers = async () => {
     try {
@@ -26,10 +26,15 @@ export default function App() {
     }
   };
 
+// :-Function Callback with searchResult dependency
+
   useEffect(() => {
     FetchUsers();
     console.log(users);
   }, [searchResult]);
+
+
+ 
 
   const dataPerPage = 10;
   const pageCount = Math.ceil(users.length / dataPerPage);
@@ -40,9 +45,13 @@ export default function App() {
   }
   const startIndex = (pages - 1) * dataPerPage;
   const uiData = users.slice(startIndex, startIndex + dataPerPage);
-  const searchData = searchResult.slice(startIndex,startIndex + dataPerPage);
+
+
+  // :- to handle the search functionality
+
+ const searchData = searchResult.slice(startIndex,startIndex + dataPerPage);
 const handleSearch = (value) => {
-    const searchResult = value.toLowerCase();
+  const searchResult = value.toLowerCase();
   const searchData = users.filter((data) => {
     return (
       data.name.toLowerCase().includes(searchResult) ||
@@ -55,6 +64,9 @@ const handleSearch = (value) => {
      console.log(searchData);
   }
     
+
+  // :-   Row Selection Functionality 
+
   const selectRow = (userId) => {
     if (!selectedRows.includes(userId)) {
       setSelectedRows([userId]);
@@ -64,6 +76,8 @@ const handleSearch = (value) => {
       setIsChecked(false);
     }
   };
+
+    // :-  For select All checboxes Functionality
 
   const handleSelectAll = (e) => {
     const dataToSelect = searchResult.length ? searchData : uiData;
@@ -77,6 +91,8 @@ const handleSearch = (value) => {
     }
   };
 
+  // :- Selected CheckBoxes Delete By delete Selected Button FFunctionality
+
   const deleteSelected = () => {
     const updatedUsers = users.filter((user) => !selectedRows.includes(user.id));
     setUsers(updatedUsers);
@@ -84,12 +100,13 @@ const handleSearch = (value) => {
     setIsChecked(false);
   };
 
+
+// :-  Edit users Data By clicking Edit Icon And Save button For Saving And Updating Data Functionality
+
   const handleEdit = (user) => {
     setEditableUser(user);
   };
 
-  
-  
   const handleSave = (editedUser) => {
     // Update the users with the edited user information
     const updatedUsers = users.map((user) =>
@@ -99,7 +116,9 @@ const handleSearch = (value) => {
   };
     
     
-  
+  // :-    Rendring Part
+
+
   return (
     
     <div>

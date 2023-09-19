@@ -1,25 +1,4 @@
-/* .table {
-  width: 100%;
-  margin-top: 20px;
 
-  
-  
-  
-}
-
-
-.table-head
-{
-width:100%;
-}
-.table th,
-.table td {
-  padding: 8px;
-  text-align: center;
-  vertical-align: middle;
-  border-bottom:1px solid grey;
-}
- */
  .table {
     width: 100%;
     border-collapse: collapse;
@@ -64,13 +43,13 @@ width:100%;
   
   .delete-icon {
   
-    color: #f44336; /* Red color */ 
+    color: #f44336; 
   
   }
   
   .edit-icon {
     color:solid gray;
-     cursor: pointer;/* Red color */ 
+     cursor: pointer;
   }
   .delete-icon,
   .edit-icon {
@@ -79,11 +58,11 @@ width:100%;
   }
   .delete-icon,
   .edit-icon {
-    font-size: 24px; /* Adjust the font size as needed */
-    margin-right: 40px; /* Add spacing between icons */
+    font-size: 24px;
+    margin-right: 40px;
     cursor: pointer;
-    display: inline-block; /* Display the icons inline */
-    vertical-align: middle; /* Align icons vertically within the cell */
+    display: inline-block; 
+    vertical-align: middle; 
     padding:10px;
     border:0.3px solid;
   }
